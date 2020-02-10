@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_chat_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.agora.tutorials1v1vcall.VideoChatViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/remote_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/remoteBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/btn_mute"
+                android:layout_width="149dp"
+                android:layout_height="133dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="49dp"
+                android:layout_marginLeft="49dp"
+                android:layout_marginTop="253dp"
+                android:layout_marginEnd="213dp"
+                android:layout_marginRight="213dp"
+                android:layout_marginBottom="26dp"
+                android:onClick="onLocalAudioMuteClicked"
+
+                android:src="@drawable/btn_unmute" />
+
+            <ImageView
+                android:id="@+id/btn_call"
+                android:layout_width="164dp"
+
+                android:layout_height="172dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="-150dp"
+                android:layout_marginLeft="-150dp"
+                android:layout_marginTop="256dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="303dp"
+                android:onClick="onCallClicked"
+
+                android:src="@drawable/btn_endcall" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="310dp"
+                android:layout_height="102dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="119dp"
+                android:layout_marginLeft="119dp"
+                android:layout_marginTop="86dp"
+                android:layout_marginEnd="-18dp"
+                android:layout_marginRight="-18dp"
+                android:text="MiCiT"
+                android:textSize="70dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/control_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/control_bottom_margin">
+
+    </RelativeLayout>
+
+    <io.agora.uikit.logger.LoggerRecyclerView
+        android:id="@+id/log_recycler_view"
+        android:layout_width="@dimen/log_container_width"
+        android:layout_height="@dimen/log_container_height"
+        android:layout_above="@+id/control_panel"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+</RelativeLayout>
